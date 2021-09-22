@@ -1,3 +1,6 @@
+import com.lig.coreunit.ProgressBarState
+import com.lig.coreunit.UIComponent
+
 sealed class DataState<T> {
 
     data class Response<T>(
@@ -10,6 +13,6 @@ sealed class DataState<T> {
 
     data class Loading<T>(
         val progressBarState: ProgressBarState
-    )
+    ): DataState<T>()
 
 }
