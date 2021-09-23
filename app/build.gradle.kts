@@ -5,7 +5,7 @@ plugins {
 
 android {
     compileSdk = Android.compileSdk
-    buildToolsVersion = "30.0.3"
+    buildToolsVersion = "30.0.2"
 
     defaultConfig {
         applicationId = Android.appId
@@ -41,7 +41,7 @@ android {
     }
 }
 
-dependencies{
+dependencies {
     implementation(project(Modules.core))
     implementation(project(Modules.heroDomain))
     implementation(project(Modules.heroInteractors))
