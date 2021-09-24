@@ -18,7 +18,6 @@ class GetHero(
     fun execute(): Flow<DataState<List<Hero>>> = flow {
         try {
             emit(DataState.Loading(ProgressBarState.Loading))
-            delay(1000) // fake see the progress bar
             val hero: List<Hero> = try {
                 service.getHeroStates()
 

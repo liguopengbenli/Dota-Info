@@ -1,5 +1,7 @@
 package com.lig.hero_datasource.network
 
+import com.lig.hero_datasource.network.model.HeroDto
+import com.lig.hero_datasource.network.model.toHero
 import com.lig.hero_domain.Hero
 import io.ktor.client.*
 import io.ktor.client.request.*

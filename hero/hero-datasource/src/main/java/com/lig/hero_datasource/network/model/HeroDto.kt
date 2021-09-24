@@ -1,4 +1,4 @@
-package com.lig.hero_datasource.network
+package com.lig.hero_datasource.network.model
 
 
 import com.lig.hero_datasource.network.EndPoints.BASE_URL
