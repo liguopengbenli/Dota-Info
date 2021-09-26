@@ -26,8 +26,8 @@ class GetHero(
                 emit(
                     DataState.Response<List<Hero>>(
                         uiComponent = UIComponent.Dialog(
-                            titile = "Error",
-                            description = e.message ?: "Network Error"
+                            title = "Network Data Error",
+                            description = e.message ?: "Network Data Error"
                         )
                     )
                 )
@@ -44,13 +44,13 @@ class GetHero(
             emit(
                 DataState.Response<List<Hero>>(
                     uiComponent = UIComponent.Dialog(
-                        titile = "Error",
+                        title = "Error",
                         description = e.message ?: "Unknown Error"
                     )
                 )
             )
         } finally {
-            emit(DataState.Loading(progressBarState = ProgressBarState.idle))
+            emit(DataState.Loading(progressBarState = ProgressBarState.Idle))
         }
     }
 

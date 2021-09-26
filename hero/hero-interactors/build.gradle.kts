@@ -14,4 +14,10 @@ dependencies {
 
     "implementation"(Kotlinx.coroutinesCore) // need for flows
 
+
+    "testImplementation"(project(Modules.heroDataSourceTest))
+    "testImplementation"(Junit.junit4)
+    "testImplementation"(Ktor.ktorClientMock)
+    "testImplementation"(Ktor.clientSerialization)
+
 }

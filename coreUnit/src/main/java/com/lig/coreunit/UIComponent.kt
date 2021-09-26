@@ -2,7 +2,7 @@ package com.lig.coreunit
 
 sealed class UIComponent {
     data class Dialog(
-        val titile: String,
+        val title: String,
         val description: String,
     ): UIComponent()
 

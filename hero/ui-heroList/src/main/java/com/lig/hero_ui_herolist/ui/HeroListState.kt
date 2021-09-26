@@ -4,6 +4,6 @@ import com.lig.coreunit.ProgressBarState
 import com.lig.hero_domain.Hero
 
 data class HeroListState(
-    val progressBarState: ProgressBarState = ProgressBarState.idle,
+    val progressBarState: ProgressBarState = ProgressBarState.Idle,
     val heros: List<Hero> = listOf()
 )
