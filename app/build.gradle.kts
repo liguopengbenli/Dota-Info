@@ -1,11 +1,15 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
     compileSdk = Android.compileSdk
-    buildToolsVersion = "30.0.2"
+    buildToolsVersion = Android.buildTools
 
     defaultConfig {
         applicationId = Android.appId
@@ -45,6 +49,7 @@ dependencies {
     implementation(project(Modules.core))
     implementation(project(Modules.heroDomain))
     implementation(project(Modules.heroInteractors))
+    implementation(project(Modules.ui_heroList))
 
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appCompat)
@@ -59,6 +64,10 @@ dependencies {
 
     implementation(Google.material)
     implementation(SqlDelight.androidDriver)
+    implementation(Coil.coil)
+
+    implementation(Hilt.android)
+    kapt(Hilt.compiler)
 }
 
 
